@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Pitt - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in 0.6in;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 12.5px;
+      color: #444;
+    }
+
+    .contact-row a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .contact-row a:hover { color: #155EEF; }
+
+    /* Sections */
+    .section { margin-bottom: 18px; }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #155EEF;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 5px 12px;
+      font-size: 12.5px;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      color: #1a1a1a;
+      white-space: nowrap;
+    }
+
+    .skill-value { color: #333; }
+
+    /* Projects */
+    .project { margin-bottom: 14px; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .project-name {
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+
+    .project-tech {
+      font-size: 11.5px;
+      color: #666;
+      font-style: italic;
+    }
+
+    .project-link {
+      font-size: 11.5px;
+      color: #155EEF;
+      text-decoration: none;
+    }
+
+    .project ul {
+      padding-left: 18px;
+      margin-top: 3px;
+    }
+
+    .project li {
+      margin-bottom: 2px;
+      font-size: 12.5px;
+      color: #333;
+    }
+
+    .project li strong { color: #1a1a1a; }
+
+    /* Experience */
+    .job { margin-bottom: 14px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-role {
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+
+    .job-period {
+      font-size: 12px;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      font-size: 12.5px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .job ul {
+      padding-left: 18px;
+    }
+
+    .job li {
+      margin-bottom: 2px;
+      font-size: 12.5px;
+      color: #333;
+    }
+
+    .job li strong { color: #1a1a1a; }
+
+    /* Print */
+    @media print {
+      body { font-size: 12px; }
+      .page { padding: 0; max-width: none; }
+      .contact-row a { color: #444; }
+      .section-title { color: #155EEF; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    @page {
+      size: letter;
+      margin: 0.5in 0.6in;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Justin Pitt</h1>
+      <div class="contact-row">
+        <span>Statesville, NC</span>
+        <a href="mailto:justin@pittnet.net">justin@pittnet.net</a>
+        <a href="tel:6197638572">619-763-5872</a>
+        <a href="https://github.com/justin-pitt" target="_blank">github.com/justin-pitt</a>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="section">
+      <div class="section-title">Summary</div>
+      <p class="summary">
+        Senior Software Engineer with 10+ years building production systems at enterprise scale. Currently building full-stack web applications with React, Next.js, TypeScript, and GraphQL alongside Django-based SaaS products with multi-LLM AI pipelines. Background in Python automation, REST API architecture, and complex system integration across security platforms. Ships fast, builds clean, works autonomously.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <span class="skill-label">Frontend</span>
+        <span class="skill-value">React, Next.js (App Router, Server Components), TypeScript, Tailwind CSS, Framer Motion, HTMX, responsive design, accessibility</span>
+
+        <span class="skill-label">Data & APIs</span>
+        <span class="skill-value">GraphQL (Yoga, Code Generator), REST API design, Stripe, OAuth2, Creatomate, Cloudflare R2, Meta/TikTok/LinkedIn APIs</span>
+
+        <span class="skill-label">Backend</span>
+        <span class="skill-value">Python, Django, FastAPI, Celery, Redis, PostgreSQL, Node.js</span>
+
+        <span class="skill-label">AI / ML</span>
+        <span class="skill-value">Claude API, OpenAI API, multi-LLM orchestration, prompt engineering, Whisper</span>
+
+        <span class="skill-label">Infrastructure</span>
+        <span class="skill-value">Vercel, Render, AWS, Azure, Docker, Linux, CI/CD, Git</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <div class="section-title">Projects</div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">level-io &mdash; React/Next.js Marketing Site Rebuild</span>
+          <a href="https://github.com/justin-pitt/level-io" class="project-link" target="_blank">github.com/justin-pitt/level-io</a>
+        </div>
+        <div class="project-tech">Next.js 16, TypeScript, GraphQL, Framer Motion, Tailwind CSS, Vercel</div>
+        <ul>
+          <li>Built a React/Next.js reimagining of an RMM company's marketing site as a frontend architecture showcase</li>
+          <li>Implemented mock GraphQL API with GraphQL Yoga, typed schema, and <strong>end-to-end type safety</strong> via GraphQL Code Generator</li>
+          <li>Built interactive feature carousel, auto-playing testimonial slider, and animated FAQ accordion with <strong>Framer Motion</strong></li>
+          <li>Designed mobile-first responsive layouts with Tailwind CSS v4, custom design tokens, and keyboard-accessible navigation</li>
+          <li>Clean <strong>TypeScript strict mode</strong> codebase with zero <code>any</code> types and proper Server/Client Component boundaries</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">reelisted &mdash; AI Real Estate Marketing SaaS</span>
+          <a href="https://reelisted.com" class="project-link" target="_blank">reelisted.com</a>
+        </div>
+        <div class="project-tech">Django 6, Claude API, OpenAI API, HTMX, Celery, Redis, Stripe, Cloudflare R2</div>
+        <ul>
+          <li>Designed, built, and shipped a full SaaS product solo &mdash; upload one MLS PDF, generate 11 marketing assets in &lt;3 minutes</li>
+          <li>Architected <strong>multi-LLM pipeline</strong> (Claude + GPT-4o) tiered by subscription plan with Stripe billing</li>
+          <li>Built video rendering pipeline with EDL editor, Creatomate API at 1080p/60fps, and Whisper-based audio ducking</li>
+          <li>Implemented AI-powered <strong>Fair Housing &amp; Ad Ethics compliance</strong> scanners with one-click fixes and async rescanning</li>
+          <li>Integrated Social OAuth (Meta/TikTok/LinkedIn), Canva, Brandfetch, and multi-seat team accounts</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">stayvant &mdash; Property Management SaaS</span>
+          <a href="https://github.com/justin-pitt/stayvant" class="project-link" target="_blank">github.com/justin-pitt/stayvant</a>
+        </div>
+        <div class="project-tech">Django 5, Stripe Connect, PostgreSQL, Plaid, Playwright</div>
+        <ul>
+          <li>Built property management SaaS for mid-term rentals with leases, rent collection, and automated PDF generation</li>
+          <li>Implemented <strong>Stripe Connect</strong> for direct landlord ACH payments with Plaid Link bank verification</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <div class="section-title">Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-role">Senior Cybersecurity Automation Engineer</span>
+          <span class="job-period">Aug 2025 &ndash; Feb 2026</span>
+        </div>
+        <div class="job-company">Eliassen Group (Contract)</div>
+        <ul>
+          <li>Built custom API integrations (Splunk, Anvilogic, Securonix, CrowdStrike, CyberArk) enabling unified security data workflows</li>
+          <li>Designed automation playbooks covering incident enrichment, phishing handling, and auto-close workflows</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-role">Senior Cybersecurity Automation Engineer</span>
+          <span class="job-period">Mar 2022 &ndash; Aug 2025</span>
+        </div>
+        <div class="job-company">Honeywell</div>
+        <ul>
+          <li>Delivered <strong>70% system efficiency improvement</strong> through automation architecture redesign and reusable backend logic</li>
+          <li>Built 4-platform integration pipeline: Qualys &rarr; XSOAR &rarr; ServiceNow &rarr; Infoblox</li>
+          <li>Mentored junior engineers on Python development, modular design, and documentation standards</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-role">Cybersecurity Automation Engineer</span>
+          <span class="job-period">Sep 2019 &ndash; Mar 2022</span>
+        </div>
+        <div class="job-company">Duke Energy Corporation</div>
+        <ul>
+          <li>Led deployment of <strong>Cortex XSOAR</strong> from roadmap through full production rollout</li>
+          <li>Built and automated NERC-CIP compliance reporting using Qualys Policy Compliance and Python</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-role">Systems &amp; Network Engineer</span>
+          <span class="job-period">Aug 2015 &ndash; Aug 2019</span>
+        </div>
+        <div class="job-company">U.S. Navy</div>
+        <ul>
+          <li>Designed network infrastructure for GCCS and NAVSSI combat systems across multiple naval vessels</li>
+          <li>Delivered cybersecurity training to 200+ personnel; managed Linux servers, Cisco ACLs, and VMware ESXi</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
